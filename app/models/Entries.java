@@ -23,6 +23,7 @@ public class Entries {
         return entries.get(id);
     }
 
+// Using Seq , Scala collections library !! Fucking Cool, mixing scala with java code!!
     public static Seq<Entry> findByName(String filter) {
         List<Entry> result = new ArrayList<Entry>();
         for (Entry entry : entries.values()) {
