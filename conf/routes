@@ -3,7 +3,7 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Application.index
+GET     /                           controllers.Application.index()
 
 GET     /entries                    controllers.Entries.list(filter ?= "")
 GET     /entries/new                controllers.Entries.add
