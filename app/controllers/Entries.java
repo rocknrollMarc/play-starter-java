@@ -6,7 +6,7 @@ import play.mvc.*;
 
         public  static Result list(String filter) {
             Seq<Entry> entries = models.Entries.findByName(filter);
-            return return ok(views.html.index.render(entries));
+            return ok(views.html.index.render(entries));
         }
 
         public static Result remove(long id) {
