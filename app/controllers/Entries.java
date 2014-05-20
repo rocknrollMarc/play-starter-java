@@ -5,7 +5,8 @@ import play.mvc.*;
     public class Entries extends Controller {
 
         public  static Result list(String filter) {
-            return TODO;
+            Seq<Entry> entries = models.Entries.findByName(filter);
+            return return ok(views.html.index.render(entries));
         }
 
         public static Result remove(long id) {

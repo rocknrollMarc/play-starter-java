@@ -27,14 +27,14 @@ public class Entries {
     public static Seq<Entry> findByName(String filter) {
         List<Entry> result = new ArrayList<Entry>();
         for (Entry entry : entries.values()) {
-            if (entry.name.toLowerCase()
-                .contains(filter.toLowerCase()))
+            if (entry.name.toLowerCase().contains(filter.toLowerCase())) {
                 result.add(entry);
         }
     }
 
     return toSeq(result);
 }
+
 
 public static void save(Entry entry) {
     if (entry.id ==null) {
